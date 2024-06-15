@@ -1,0 +1,52 @@
+version: "3"
+
+services:
+  pg_database:
+    image: postgres
+    container_name: postgres_db
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/data/postgres
+    environment:
+      POSTGRES_DB: pg
+      POSTGRES_USER: pg
+      POSTGRES_PASSWORD: pg
+    networks:
+      - teste-network
+    deploy:
+      resources:
+        limits:
+          memory: 4096M
+        reservations:
+          memory: 2048M
+  
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - pg_database
+    networks:
+      - teste-network
+    links:
+      - pg_database
+    deploy:
+      resources:
+        limits:
+          memory: 4096M
+        reservations:
+          memory: 2048M
+
+volumes:
+  pgdata:
+    driver: local
+    
+networks:
+  teste-network:

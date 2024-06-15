@@ -1,0 +1,16 @@
+Started GET "/" for 127.0.0.1 at 2023-11-30 18:08:09 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/everson/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/everson/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.2ms | Allocations: 587)
+Completed 200 OK in 13ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 4675)
+
+
+Started GET "/" for ::1 at 2024-06-15 09:16:38 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/everson/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/everson/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-6.1.7.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.2ms | Allocations: 445)
+Completed 200 OK in 13ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3047)
+
+
